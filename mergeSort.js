@@ -21,13 +21,14 @@ function mergeSort(array) {
   return sortedArray;
 }
 
-function generateRandomArray() {
+const randomArray = (() => {
   const array = [];
   for (let i = 0; i < Math.floor(Math.random() * 100); i++) {
     const randomNumber = Math.floor(Math.random() * 100);
     array.push(randomNumber);
   }
   return array;
-}
+})();
 
-console.log(mergeSort(generateRandomArray()));
+console.log(randomArray);
+console.log(mergeSort(randomArray));
